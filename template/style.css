@@ -146,7 +146,7 @@ a:hover {
   height: 3rem;
   padding: .5rem;
   font-size: 2rem;
-  padding-top: 0;
+  padding-top: .15rem;
   cursor: pointer;
   position: absolute;
   right: .5rem;
