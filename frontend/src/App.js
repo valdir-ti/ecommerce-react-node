@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
-import data from './data';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
+import HomeScreen from './components/HomeScreen/HomeScreen';
+import ProductScreen from './components/ProductScreen/ProductScreen';
 
 function App() {
 
@@ -12,64 +15,52 @@ function App() {
   }
 
   return (
-    <div className="grid-container">
 
-      <header className="header">
-      
-        <div className="brand">        
-          <button onClick={openMenu}>
-            &#9776;
-          </button>
-          <a href="index.html">amazona</a>
-      </div>
+    <BrowserRouter>
+        <div className="grid-container">
 
-      <div className="header-links">
-        <a href="cart.html">Cart</a>
-        <a href="signin.html">Signin</a>
-      </div>
-
-    </header>
-
-    <aside className="sidebar">
-      <h3>Shopping Categories</h3>
-      <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-      <ul>
-        <li>
-          <a href="index.html">Pants</a>
-        </li>
-        <li>
-          <a href="index.html">Shirts</a>
-        </li>
-      </ul>
-    </aside>
-    
-    <main className="main">
-      <div className="content">
-        <ul className="products">
+          <header className="header">
           
-          { data.products.map(product => 
-              <li>
-                <div className="product">
-                  <img src={product.image} alt="product" className="product-image" />
-                  <div className="product-name">
-                    <a href="product.html">{product.name}</a>
-                  </div>            
-                  <div className="product-brand">{product.brand}</div>             
-                  <div className="product-price">${product.price}</div>
-                  <div className="product-rating">{product.rating} Stars ({product.numReviews} Reviews)</div>
-                </div>
-              </li>
-          )}
+            <div className="brand">        
+              <button onClick={openMenu}>
+                &#9776;
+              </button>
+              <Link to="/">amazona</Link>
+          </div>
 
-        </ul>
+          <div className="header-links">
+            <a href="cart.html">Cart</a>
+            <a href="signin.html">Signin</a>
+          </div>
+
+        </header>
+
+        <aside className="sidebar">
+          <h3>Shopping Categories</h3>
+          <button className="sidebar-close-button" onClick={closeMenu}>x</button>
+          <ul>
+            <li>
+              <a href="index.html">Pants</a>
+            </li>
+            <li>
+              <a href="index.html">Shirts</a>
+            </li>
+          </ul>
+        </aside>
+        
+        <main className="main">
+          <div className="content">
+            <Route path="/" exact component={HomeScreen} />
+            <Route path="/product/:id" component={ProductScreen} />
+          </div>
+        </main>
+
+        <footer className="footer">
+          &copy; All right reserved.
+        </footer>
+
       </div>
-    </main>
-
-    <footer className="footer">
-      &copy; All right reserved.
-    </footer>
-
-  </div>
+    </BrowserRouter>
   );
 }
 
