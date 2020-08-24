@@ -8,7 +8,8 @@ export default {
       price: 64,
       brand: 'Nike',
       rating: 4.5,
-      numReviews: 10
+      numReviews: 10,
+      countInStock: 5
     },
     {
       _id: '2',
@@ -18,7 +19,8 @@ export default {
       price: 40,
       brand: 'Nike',
       rating: 5.0,
-      numReviews: 15
+      numReviews: 15,
+      countInStock: 12
     },
     {
       _id: '3',
@@ -28,7 +30,8 @@ export default {
       price: 23,
       brand: 'Adidas',
       rating: 4.0,
-      numReviews: 34
+      numReviews: 34,
+      countInStock: 6
     },
     {
       _id: '4',
@@ -38,7 +41,8 @@ export default {
       price: 76,
       brand: 'Lacoste',
       rating: 3.8,
-      numReviews: 100
+      numReviews: 100,
+      countInStock: 6
     },
     {
       _id: '5',
@@ -48,7 +52,8 @@ export default {
       price: 76,
       brand: 'Lacoste',
       rating: 3.8,
-      numReviews: 100
+      numReviews: 100,
+      countInStock: 4
     },
     {
       _id: '6',
@@ -58,7 +63,8 @@ export default {
       price: 76,
       brand: 'Lacoste',
       rating: 3.8,
-      numReviews: 100
+      numReviews: 100,
+      countInStock: 6
     },
     {
       _id: '7',
@@ -68,7 +74,8 @@ export default {
       price: 76,
       brand: 'Lacoste',
       rating: 3.8,
-      numReviews: 100
+      numReviews: 100,
+      countInStock: 0
     },
   ]
 }
