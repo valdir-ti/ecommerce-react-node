@@ -10,6 +10,10 @@ body{
   margin: 0;
 }
 
+button{
+  font-size: 1.6rem;
+}
+
 #root{
   height: 100%;
 }
