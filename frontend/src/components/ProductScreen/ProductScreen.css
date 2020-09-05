@@ -47,6 +47,3 @@
 .button:hover{
   border: .1rem #404040 solid;
 }
-.button.primary{
-  background-color: #f0c040;
-}

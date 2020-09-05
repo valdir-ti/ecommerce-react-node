@@ -2,13 +2,13 @@ import express from 'express';
 import cors from 'cors';
 import data from './data';
 import dotenv from 'dotenv';
-import config from './config'; 
 import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 
 dotenv.config();
 
-const mongodbUrl = config.MONGODB_URL;
+const mongodbUrl = dotenv.config().parsed.MONGODB_URL;
 
 mongoose.connect(mongodbUrl,{
   useNewUrlParser: true,
@@ -17,6 +17,7 @@ mongoose.connect(mongodbUrl,{
 }).catch(error => console.log(error.reason));
 
 const app = express();
+app.use(bodyParser.json());
 const port = 5001;
 app.use(cors());
 

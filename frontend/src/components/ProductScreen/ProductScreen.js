@@ -66,7 +66,7 @@ function ProductScreen(props) {
               Price: {product.price}
             </li>
             <li>
-              Status: {product.countInStock > 0 && "In Stock" || "Out of Stock"}
+              Status: {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
             </li>
             {product.countInStock > 0 ? 
                 <li>
@@ -80,7 +80,7 @@ function ProductScreen(props) {
                 <div>&nbsp;</div>
               }
             <li>
-                {product.countInStock > 0 && <button onClick={handleAddToCart} className="button primary">Add to Cart</button> || <div>Out of Stock</div> }
+                {product.countInStock > 0 ? <button onClick={handleAddToCart} className="button primary">Add to Cart</button> : <div>Out of Stock</div> }
             </li>
 
           </ul>

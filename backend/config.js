@@ -1,3 +1,4 @@
-export default {
-  MONGODB_URL: process.env.MONGODB_URL || process.env.MONGODB_URL_ATLAS 
+export default {  
+  MONGODB_URL: process.env.MONGODB_URL || process.env.MONGODB_URL_ATLAS,
+  JWT_SECRET: process.env.JWT_SECRET || 'somethingsecret'
 }
